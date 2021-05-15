@@ -1,6 +1,8 @@
-export const Header = ({example, ...props}) => {
+import defaultExport from './hnArticles.js';
+
+export const Header = (props) => {
     return(
-      <div className={example}>
+      <div className = 'head'>
         <h1>HACKERNOON</h1>
         <input type='search'/>
         <button>Start Writing</button>
@@ -9,8 +11,6 @@ export const Header = ({example, ...props}) => {
       </div>    
     );
 }
-  
-// Header.props.className = 'header';
   
 export const SubNav = (props) => {
     return(
@@ -36,14 +36,89 @@ export const SubNav = (props) => {
       </nav>
     );
 }
+
 export const LinkSection = (props) =>   {
+    let sectionName = props.section;
     return(
-        <div className=''>{props.sectionName}</div>
+      <div>
+        <div className=''>{props.sectionHeading}</div>
+        <Article section = {sectionName} index = {0}/>
+        <Article section = {sectionName} index = {1}/>
+        <Article section = {sectionName} index = {2}/>
+      </div>
     );
 }
 
-export const Article = (props)  =>   {
+const Article = (props)  =>   {
+    let sectionName = props.section;
+    let indexNumber = props.index;
+
     return(
-        <div></div>
+        <div>
+          <Title section = {sectionName} index = {indexNumber}/>
+          <Link section = {sectionName} index = {indexNumber}/>
+          <Avatar section = {sectionName} index = {indexNumber}/>
+          <Username section = {sectionName} index = {indexNumber}/>
+          <Author section = {sectionName} index = {indexNumber}/>
+          <ReadIn section = {sectionName} index = {indexNumber}/>
+          <Posted section = {sectionName} index = {indexNumber}/>
+          <Hashtag section = {sectionName} index = {indexNumber}/>
+        </div>
     );
+}
+
+const Title = (props)  =>  {
+  let title = defaultExport[props.section][props.index]['titleText'];
+  return(
+    <p>{title}</p>
+  );
+}
+
+const Link = (props) =>  {
+  let link = defaultExport[props.section][props.index]['titleLink'];
+  return(
+    <p>{link}</p>
+  );
+}
+
+const Avatar = (props) =>  {
+  let avatar = defaultExport[props.section][props.index]['avatarSrc'];
+  return(
+    <p>{avatar}</p>
+  );
+}
+
+const Username = (props) =>  {
+  let username = defaultExport[props.section][props.index]['userName'];
+  return(
+    <p>{username}</p>
+  );
+}
+
+const Author = (props) =>  {
+  let author = defaultExport[props.section][props.index]['author'];
+  return(
+    <p>{author}</p>
+  );
+}
+
+const ReadIn = (props) =>  {
+  let readIn = defaultExport[props.section][props.index]['readIn'];
+  return(
+    <p>{readIn}</p>
+  );
+}
+
+const Posted = (props) =>  {
+  let posted = defaultExport[props.section][props.index]['posted'];
+  return(
+    <p>{posted}</p>
+  );
+}
+
+const Hashtag = (props) =>  {
+  let hashtag = defaultExport[props.section][props.index]['hashTag'];
+  return(
+    <p>{hashtag}</p>
+  );
 }

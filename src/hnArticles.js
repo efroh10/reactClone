@@ -223,7 +223,7 @@ export default {
             "hashTag": "#gaming"
         }
     ],
-    "Ai": [
+    "AI": [
         {
             "titleText": "Artificial Intelligence: Multimillennial Data Transmitted To Machin...",
             "titleLink": "https://hackernoon.com/artificial-intelligence-multimillennial-data-transmitted-to-machines-with-brains-x410337v",

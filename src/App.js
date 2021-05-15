@@ -1,30 +1,29 @@
 import './App.css';
-import articles from './hnArticles';
-import {Header, LinkSection, SubNav} from './components';
+import {Header, LinkSection, SubNav, } from './components';
 
 function App() {
   return (
     <div className="App">
-      <Header example = 'head'/>
+      <Header/>
       <SubNav/>
-      <LinkSection sectionName='Programming'/>
-      <LinkSection sectionName='Technology'/>
-      <LinkSection sectionName='Cryptocurrency'/>
-      <LinkSection sectionName='Javascript'/>
-      <LinkSection sectionName='Python'/>
-      <LinkSection sectionName='Blockchain'/>
-      <LinkSection sectionName='Gaming'/>
-      <LinkSection sectionName='AI'/>
-      <LinkSection sectionName='Startup'/>
-      <LinkSection sectionName='React'/>
-      <LinkSection sectionName='Security'/>
-      <LinkSection sectionName='Slogging'/>
-      <LinkSection sectionName='Hackernoon Podcast'/>
-      <LinkSection sectionName='Decentralization'/>
-      <LinkSection sectionName='Velo'/>
-      <LinkSection sectionName='Hackernoon'/>
-      <LinkSection sectionName='Decentralized Internet'/>
-      <LinkSection sectionName='Software Development'/>
+      <LinkSection section = 'Programming'/>
+      <LinkSection section = 'Technology'/>
+      <LinkSection section = 'Cryptocurrency'/>
+      <LinkSection section = 'Javascript'/>
+      <LinkSection section = 'Python'/>
+      <LinkSection section = 'Blockchain'/>
+      <LinkSection section = 'Gaming'/>
+      <LinkSection section = 'AI'/>
+      <LinkSection section = 'Startup'/>
+      <LinkSection section = 'React'/>
+      <LinkSection section = 'Security'/>
+      <LinkSection section = 'Slogging'/>
+      <LinkSection section = 'Hackernoon Podcast'/>
+      <LinkSection section = 'Decentralization'/>
+      <LinkSection section = 'Velo'/>
+      <LinkSection section = 'Hackernoon'/>
+      <LinkSection section = 'Decentralized Internet'/>
+      <LinkSection section = 'Software Development'/>
     </div>
   );
 }
