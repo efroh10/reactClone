@@ -1,11 +1,12 @@
 import './App.css';
-import {Header, LinkSection, SubNav, } from './components';
+import {Header, JoinButton, LinkSection, SubNav, Footer} from './components';
 
 function App() {
   return (
     <div className="App">
       <Header/>
       <SubNav/>
+      <JoinButton/>
       <LinkSection section = 'Programming'/>
       <LinkSection section = 'Technology'/>
       <LinkSection section = 'Cryptocurrency'/>
@@ -24,10 +25,9 @@ function App() {
       <LinkSection section = 'Hackernoon'/>
       <LinkSection section = 'Decentralized Internet'/>
       <LinkSection section = 'Software Development'/>
+      <Footer/>
     </div>
   );
 }
-
-// testing git push
 
 export default App;

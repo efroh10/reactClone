@@ -1,4 +1,5 @@
 import defaultExport from './hnArticles.js';
+import expectedExport from './footerData.js';
 
 export const Header = (props) => {
     return(
@@ -48,6 +49,51 @@ export const LinkSection = (props) =>   {
       </div>
     );
 }
+
+export const JoinButton = (props) =>  {
+  return(
+    <div>
+      <form action = 'https://hackernoon.com'>
+        <button>Join Hacker Noon</button>
+      </form>
+      <p>Create your free account to unlock your custom reading experience.</p>
+    </div>
+  );
+}
+
+export const Footer = (props) =>  {
+  return(
+    <div>
+      <FooterLinkSection section = 'About'/>
+      <FooterLinkSection section = 'Read'/>
+      <FooterLinkSection section = 'Write'/>
+    </div>
+  );
+}
+
+const FooterLinkSection = (props)  =>  {
+  let sectionTitle = props.section;
+  return(
+    <div>
+      <FooterLink section = {sectionTitle} index = {0}/>
+      <FooterLink section = {sectionTitle} index = {1}/>
+      <FooterLink section = {sectionTitle} index = {2}/>
+      <FooterLink section = {sectionTitle} index = {3}/>
+      <FooterLink section = {sectionTitle} index = {4}/>
+      <FooterLink section = {sectionTitle} index = {5}/>
+    </div>
+  );
+}
+
+const FooterLink = (props) =>  {
+  return(
+    <a href = {expectedExport[props.section][props.index]['href']}>{expectedExport[props.section][props.index]['displayName']}</a>
+  );
+}
+
+
+
+
 
 const Article = (props)  =>   {
     let sectionName = props.section;
