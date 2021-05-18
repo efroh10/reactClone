@@ -70,6 +70,8 @@ body  {
 
 .sectionName  {
   padding-top: 25px;
+  text-decoration: underline rgba(0, 255, 0, 0.35);
+  text-decoration-thickness: 5px;
 }
 
 .avatar {
