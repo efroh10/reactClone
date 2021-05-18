@@ -1,4 +1,137 @@
+body  {
+  margin: 0;
+  font-family: monospace;
+}
+
 .head {
   display: flex;
   background-color: lime;
+}
+
+.darkMode {
+  background-image: url('./darkMode.png');
+  background-size: 60px;
+  width: 50px;
+  height: 50px;
+  background-position: center;
+  position: relative;
+  top: 17px;
+  margin-right: 10px;
+}
+
+.headerInput {
+  height: 25px;
+  position: relative;
+  top: 17px;
+  margin: 10px;
+}
+
+.search {
+  margin-left: 60%;
+}
+
+.button {
+  width: 100px;
+}
+
+.nav  {
+  display: flex;
+  background-color: rgb(0, 59, 0);
+  justify-content: space-between;
+  height: 20px;
+  align-items: center;
+}
+
+.navLink  {
+  color: white;
+  padding-left: 3px;
+  padding-right: 3px;
+  text-decoration: none;
+  font-size: 10px;
+}
+
+.mainArea {
+  background-color: rgb(33, 36, 40);
+  color: white;
+  margin-bottom: 0px;
+}
+
+.linkSection  {
+  text-align: center;
+  font-size: x-large;
+}
+
+.links  {
+  display: flex;
+  margin-top: 25px;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.sectionName  {
+  padding-top: 25px;
+}
+
+.avatar {
+  width: 30px;
+  height: 30px;
+}
+
+.link {
+  color: white;
+  text-decoration: none;
+  font-size: large;
+}
+
+.link:hover {
+  cursor: pointer;
+}
+
+.article  {
+  border: 3px solid darkgray;
+  width: 33%;
+  height: 400px;
+  padding: 0px 50px;
+}
+
+.footer {
+  background-color: rgb(60, 60, 59);
+  height: 300px;
+  display: flex;
+}
+
+.footerLink {
+  color: white;
+  font-size: medium;
+}
+
+.footerLinkSection  {
+  color: white;
+  font-size: x-large;
+  width: 33%;
+  line-height: 25px;
+}
+
+.joinButtonSection {
+  background-color: rgb(33, 36, 40);
+  height: 200px;
+  margin-top: 0px;
+  justify-content: center;
+  color: white;
+  padding-top: 20px;
+}
+
+.joinButton {
+  height: 70px;
+  width: 400px;
+  margin-left: 36%;
+  background-color: rgb(33, 36, 40);
+  color: white;
+  border: 4px solid rgb(0, 255, 0);
+  font-size: xx-large;
+}
+
+.message  {
+  margin-left: 30%;
+  font-size: large;
 }

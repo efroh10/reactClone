@@ -5,65 +5,79 @@ export const Header = (props) => {
     return(
       <div className = 'head'>
         <h1>HACKERNOON</h1>
-        <input type='search'/>
-        <button>Start Writing</button>
-        <a href=''>Log In</a>
-        <img/>
+        <input type='search' className = 'headerInput search'/>
+        <button className = 'headerInput button'>Start Writing</button>
+        <a href='' className = 'headerInput'>Log In</a>
+        <button className='darkMode'></button>
       </div>    
     );
 }
   
 export const SubNav = (props) => {
     return(
-      <nav>
-        <a href='#'>Programming</a>
-        <a href='#'>Technology</a>
-        <a href='#'>Cryptocurrency</a>
-        <a href='#'>Javascript</a>
-        <a href='#'>Python</a>
-        <a href='#'>Blockchain</a>
-        <a href='#'>Gaming</a>
-        <a href='#'>AI</a>
-        <a href='#'>Startup</a>
-        <a href='#'>React</a>
-        <a href='#'>Security</a>
-        <a href='#'>Slogging</a>
-        <a href='#'>Hackernoon Podcast</a>
-        <a href='#'>Decentralization</a>
-        <a href='#'>Velo</a>
-        <a href='#'>Hackernoon</a>
-        <a href='#'>Decentralized Internet</a>
-        <a href='#'>Software Development</a>
+      <nav className = 'nav'>
+        <a className = 'navLink' href='#Programming'>Programming </a>
+        <a className = 'navLink' href='#Technology'> Technology </a>
+        <a className = 'navLink' href='#Cryptocurrency'> Cryptocurrency </a>
+        <a className = 'navLink' href='#Javascript'> Javascript </a>
+        <a className = 'navLink' href='#Python'> Python </a>
+        <a className = 'navLink' href='#Blockchain'> Blockchain </a>
+        <a className = 'navLink' href='#Gaming'> Gaming </a>
+        <a className = 'navLink' href='#AI'> AI </a>
+        <a className = 'navLink' href='#Startup'> Startup </a>
+        <a className = 'navLink' href='#React'> React </a>
+        <a className = 'navLink' href='#Security'> Security </a>
+        <a className = 'navLink' href='#Slogging'> Slogging </a>
+        <a className = 'navLink' href='#Hackernoon Podcast'> Hackernoon Podcast </a>
+        <a className = 'navLink' href='#Decentralization'> Decentralization </a>
+        <a className = 'navLink' href='#Velo'> Velo </a>
+        <a className = 'navLink' href='#Hackernoon'> Hackernoon </a>
+        <a className = 'navLink' href='#Decentralized Internet'> Decentralized Internet </a>
+        <a className = 'navLink' href='#Software Development'> Software Development</a>
       </nav>
     );
 }
 
-export const LinkSection = (props) =>   {
-    let sectionName = props.section;
-    return(
-      <div>
-        <div className=''>{props.sectionHeading}</div>
-        <Article section = {sectionName} index = {0}/>
-        <Article section = {sectionName} index = {1}/>
-        <Article section = {sectionName} index = {2}/>
-      </div>
-    );
+export const MainArea = (props) =>  {
+  return(
+    <div className = 'mainArea'>
+      <LinkSection section = 'Programming'/>
+      <LinkSection section = 'Technology'/>
+      <LinkSection section = 'Cryptocurrency'/>
+      <LinkSection section = 'Javascript'/>
+      <LinkSection section = 'Python'/>
+      <LinkSection section = 'Blockchain'/>
+      <LinkSection section = 'Gaming'/>
+      <LinkSection section = 'AI'/>
+      <LinkSection section = 'Startup'/>
+      <LinkSection section = 'React'/>
+      <LinkSection section = 'Security'/>
+      <LinkSection section = 'Slogging'/>
+      <LinkSection section = 'Hackernoon Podcast'/>
+      <LinkSection section = 'Decentralization'/>
+      <LinkSection section = 'Velo'/>
+      <LinkSection section = 'Hackernoon'/>
+      <LinkSection section = 'Decentralized Internet'/>
+      <LinkSection section = 'Software Development'/>
+    </div>
+  );
 }
 
 export const JoinButton = (props) =>  {
   return(
-    <div>
+    <div className = 'joinButtonSection'>
       <form action = 'https://hackernoon.com'>
-        <button>Join Hacker Noon</button>
+        <button className = 'joinButton'>Join Hacker Noon</button>
       </form>
-      <p>Create your free account to unlock your custom reading experience.</p>
+      <br/>
+      <p className = 'message'>Create your free account to unlock your custom reading experience.</p>
     </div>
   );
 }
 
 export const Footer = (props) =>  {
   return(
-    <div>
+    <div className = 'footer'>
       <FooterLinkSection section = 'About'/>
       <FooterLinkSection section = 'Read'/>
       <FooterLinkSection section = 'Write'/>
@@ -71,15 +85,23 @@ export const Footer = (props) =>  {
   );
 }
 
+
+
 const FooterLinkSection = (props)  =>  {
   let sectionTitle = props.section;
   return(
-    <div>
+    <div className = 'footerLinkSection'>
+      <div>{sectionTitle}</div>
       <FooterLink section = {sectionTitle} index = {0}/>
+      <br/>
       <FooterLink section = {sectionTitle} index = {1}/>
+      <br/>
       <FooterLink section = {sectionTitle} index = {2}/>
+      <br/>
       <FooterLink section = {sectionTitle} index = {3}/>
+      <br/>
       <FooterLink section = {sectionTitle} index = {4}/>
+      <br/>
       <FooterLink section = {sectionTitle} index = {5}/>
     </div>
   );
@@ -87,22 +109,32 @@ const FooterLinkSection = (props)  =>  {
 
 const FooterLink = (props) =>  {
   return(
-    <a href = {expectedExport[props.section][props.index]['href']}>{expectedExport[props.section][props.index]['displayName']}</a>
+    <a className = 'footerLink' href = {expectedExport[props.section][props.index]['href']}>{expectedExport[props.section][props.index]['displayName']}</a>
   );
 }
 
 
 
-
+const LinkSection = (props) =>   {
+  let sectionName = props.section;
+  return(
+    <div className = 'linkSection' id = {props.section}>
+      <div className = 'sectionName'>{props.section}</div>
+      <div className = 'links'>
+        <Article section = {sectionName} index = {0}/>
+        <Article section = {sectionName} index = {1}/>
+        <Article section = {sectionName} index = {2}/>
+      </div>
+    </div>
+  );
+}
 
 const Article = (props)  =>   {
     let sectionName = props.section;
     let indexNumber = props.index;
-
     return(
-        <div>
+        <div className = 'article'>
           <Title section = {sectionName} index = {indexNumber}/>
-          <Link section = {sectionName} index = {indexNumber}/>
           <Avatar section = {sectionName} index = {indexNumber}/>
           <Username section = {sectionName} index = {indexNumber}/>
           <Author section = {sectionName} index = {indexNumber}/>
@@ -115,22 +147,23 @@ const Article = (props)  =>   {
 
 const Title = (props)  =>  {
   let title = defaultExport[props.section][props.index]['titleText'];
+  let link = defaultExport[props.section][props.index]['titleLink'];
   return(
-    <p>{title}</p>
+    <a className = 'link' href = {link} >{title}</a>
   );
 }
 
-const Link = (props) =>  {
-  let link = defaultExport[props.section][props.index]['titleLink'];
-  return(
-    <p>{link}</p>
-  );
-}
+// const Link = (props) =>  {
+//   let link = defaultExport[props.section][props.index]['titleLink'];
+//   return(
+//     <p>{link}</p>
+//   );
+// }
 
 const Avatar = (props) =>  {
   let avatar = defaultExport[props.section][props.index]['avatarSrc'];
   return(
-    <p>{avatar}</p>
+    <img className = 'avatar' src = {avatar}></img>
   );
 }
 
